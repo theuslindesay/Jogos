@@ -5,13 +5,14 @@ public class controllerPersonagem : MonoBehaviour
     public float moveSpeed = 5f;
     public float moveX;
     public float jumpForce = 10f;
-    private Rigidbody2D rb2d;
+    private Rigidbody2D rb2d;   
 
     public Transform groundCheck;
     public LayerMask groundLayer;
     private bool isGrounded;
     public Transform visual;
     private Animator anim;
+
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -46,4 +47,5 @@ public class controllerPersonagem : MonoBehaviour
     {
         rb2d.linearVelocity = new Vector2(rb2d.linearVelocity.x, jumpForce);
     }
+    
 }
