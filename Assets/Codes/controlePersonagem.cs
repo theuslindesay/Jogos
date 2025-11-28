@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class controllerPersonagem : MonoBehaviour
 {
+    public float maxHealth = 100f;
+    public float currentHealth;
     public float moveSpeed = 5f;
     public float moveX;
     public float jumpForce = 10f;
@@ -17,7 +19,8 @@ public class controllerPersonagem : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         anim = visual.GetComponent<Animator>();
-        
+        currentHealth = maxHealth;
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
