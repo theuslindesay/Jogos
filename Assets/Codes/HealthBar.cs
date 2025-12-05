@@ -1,19 +1,17 @@
 using UnityEngine;
 using UnityEngine.UI;
+
 public class HealthBar : MonoBehaviour
 {
-    
     private Image healthBarFill;
-    void Start(){
-        
-    }
+
+    void Start()
     {
-        
+        healthBarFill = this.GetComponent<Image>();
     }
 
-    
-    void Update()
+    public void UpdateHealthBar(float currentHealth, float maxHealth)
     {
-        
+        healthBarFill.fillAmount = currentHealth / maxHealth;
     }
 }
