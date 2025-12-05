@@ -14,12 +14,12 @@ public class enemywaypoint : MonoBehaviour
     [Header("Combat Settings")]
     public float damage = 10f;
     public float attackCooldown = 1f;
-    public float knockbackForce = 15f;
+    public float knockbackForce = 60f;
 
     private Rigidbody2D rb;
     private int currentWaypointIndex = 0;
     private Vector2 movementDirection;
-    private float lastAttackTime;
+    private float lastAttackTime;   
 
     void Start()
     {
@@ -39,15 +39,6 @@ public class enemywaypoint : MonoBehaviour
     {
         MoveTowardsWaypoint();
         CheckIfWaypointReached();
-    }
-
-    void SetTargetWaypoint(int index)
-    {
-        if (waypoints.Count == 0) return;
-
-        currentWaypointIndex = index;
-        Vector2 targetPosition = waypoints[currentWaypointIndex].position;
-        movementDirection = (targetPosition - (Vector2)transform.position).normalized;
     }
 
     void MoveTowardsWaypoint()
@@ -74,6 +65,12 @@ public class enemywaypoint : MonoBehaviour
         }
     }
 
+    public void Jump(float jumpForce)
+    {
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+
+    }
+
     void GoToNextWaypoint()
     {
         currentWaypointIndex++;
@@ -96,9 +93,13 @@ public class enemywaypoint : MonoBehaviour
         SetTargetWaypoint(currentWaypointIndex);
     }
 
-     public void Jump(float jumpForce)
+    void SetTargetWaypoint(int index)
     {
-        rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+        if (waypoints.Count == 0) return;
+
+        currentWaypointIndex = index;
+        Vector2 targetPosition = waypoints[currentWaypointIndex].position;
+        movementDirection = (targetPosition - (Vector2)transform.position).normalized;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -118,25 +119,17 @@ public class enemywaypoint : MonoBehaviour
     }
 
     void TryAttackPlayer(GameObject player)
-{
-    if (Time.time >= lastAttackTime + attackCooldown)
     {
-        PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
-        if (playerHealth != null)
+        if (Time.time >= lastAttackTime + attackCooldown)
         {
-            Vector2 knockbackDirection = (player.transform.position - transform.position).normalized;
+            PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
+            if (playerHealth != null)
+            {
+                Vector2 knockbackDirection = (player.transform.position - transform.position).normalized;
 
-            if (knockbackDirection.x >= 0)
-                knockbackDirection = new Vector2(1f, 0.5f);
-            else
-                knockbackDirection = new Vector2(-1f, 0.5f);
-
-            knockbackDirection = knockbackDirection.normalized;
-
-            playerHealth.TakeDamage(damage, knockbackDirection, knockbackForce);
-            lastAttackTime = Time.time;
+                playerHealth.TakeDamage(damage, knockbackDirection, knockbackForce);
+                lastAttackTime = Time.time;
+            }
         }
     }
-}
-
 }

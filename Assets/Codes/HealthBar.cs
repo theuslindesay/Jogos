@@ -11,7 +11,7 @@ public class HealthBar : MonoBehaviour
     }
 
     public void UpdateHealthBar(float currentHealth, float maxHealth)
-    {
+    {   
         healthBarFill.fillAmount = currentHealth / maxHealth;
     }
 }

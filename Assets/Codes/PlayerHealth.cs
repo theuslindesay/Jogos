@@ -2,12 +2,10 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [Header("Health Settings")]
+
     public float maxHealth = 100f;
     public float currentHealth;
-
-    [Header("References")]
-    public HealthBar healthBar;
+    public HealthBar vida;
 
     private Rigidbody2D rb;
 
@@ -16,10 +14,6 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = maxHealth;
         rb = GetComponent<Rigidbody2D>();
 
-        if (healthBar != null)
-        {
-            healthBar.UpdateHealthBar(currentHealth, maxHealth);
-        }   
     }
 
     public void TakeDamage(float damage, Vector2 knockbackDirection, float knockbackForce = 10f)
@@ -29,15 +23,13 @@ public class PlayerHealth : MonoBehaviour
 
         rb.AddForce(knockbackDirection * knockbackForce, ForceMode2D.Impulse);
 
-        if (healthBar != null)
-        {
-            healthBar.UpdateHealthBar(currentHealth, maxHealth);
-        }
-
+        vida.UpdateHealthBar(currentHealth, maxHealth);
+        
         if (currentHealth <= 0)
         {
             Die();     
         }
+
     }
 
     void Die()        
