@@ -476,7 +476,7 @@ MonoBehaviour:
   currentHealth: 0
   moveSpeed: 5
   moveX: 0
-  jumpForce: 20
+  jumpForce: 10
   groundCheck: {fileID: 1357125123}
   groundLayer:
     serializedVersion: 2
@@ -1166,7 +1166,7 @@ MonoBehaviour:
   - {fileID: 1802169072}
   - {fileID: 779889132}
   moveSpeed: 5.23
-  waypointReachedDistance: 0.78
+  waypointReachedDistance: 0.9
   loop: 1
   damage: 10
   attackCooldown: 1
