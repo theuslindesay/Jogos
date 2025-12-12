@@ -133,4 +133,15 @@ public class enemywaypoint : MonoBehaviour
             }
         }
     }
+    void Update()
+{
+
+    if (name == "enemy (4)") 
+    {
+        float dist = Vector2.Distance(transform.position, waypoints[currentWaypointIndex].position);
+        Debug.Log($"Estou tentando ir para: {waypoints[currentWaypointIndex].name} | Distância: {dist} | Speed: {moveSpeed}");
+    }
+}
+
+
 }

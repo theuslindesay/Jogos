@@ -7,6 +7,7 @@ TagManager:
   - Inimigo
   - enemy
   - Enemy
+  - Coin
   layers:
   - Default
   - TransparentFX
