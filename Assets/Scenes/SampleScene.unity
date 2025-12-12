@@ -258,19 +258,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2179502181963546506, guid: 8a4899f974b061d4fb551d9820fad7e0, type: 3}
       propertyPath: m_LocalScale.x
-      value: 6.248456
+      value: 17.116873
       objectReference: {fileID: 0}
     - target: {fileID: 2179502181963546506, guid: 8a4899f974b061d4fb551d9820fad7e0, type: 3}
       propertyPath: m_LocalScale.y
-      value: 4.7415347
+      value: 4.8161845
       objectReference: {fileID: 0}
     - target: {fileID: 2179502181963546506, guid: 8a4899f974b061d4fb551d9820fad7e0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.17
+      value: 4.4264
       objectReference: {fileID: 0}
     - target: {fileID: 2179502181963546506, guid: 8a4899f974b061d4fb551d9820fad7e0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.73
+      value: -10.6218
       objectReference: {fileID: 0}
     - target: {fileID: 2179502181963546506, guid: 8a4899f974b061d4fb551d9820fad7e0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -437,7 +437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79d397a5133b33b488acdd3307dd3c4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Parallax
-  parallaxEffect: -0.1
+  parallaxEffect: 0.5
   infiniteScrolling: 0
 --- !u!1 &371590398
 GameObject:
@@ -727,7 +727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79d397a5133b33b488acdd3307dd3c4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Parallax
-  parallaxEffect: -0.1
+  parallaxEffect: 0.5
   infiniteScrolling: 0
 --- !u!1 &519420028
 GameObject:
@@ -1627,7 +1627,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2651934442701208912, guid: 28f39b14a6b25cf478c87c3d58fdfcb2, type: 3}
       propertyPath: m_SortingOrder
-      value: -7
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 7272227008722246710, guid: 28f39b14a6b25cf478c87c3d58fdfcb2, type: 3}
       propertyPath: m_Name
@@ -1887,6 +1887,7 @@ GameObject:
   - component: {fileID: 1294565828}
   - component: {fileID: 1294565827}
   - component: {fileID: 1294565826}
+  - component: {fileID: 1294565829}
   m_Layer: 0
   m_Name: 1_0
   m_TagString: Untagged
@@ -1989,6 +1990,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1294565829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294565825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79d397a5133b33b488acdd3307dd3c4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Parallax
+  parallaxEffect: -0.1
+  infiniteScrolling: 1
 --- !u!1 &1357125122
 GameObject:
   m_ObjectHideFlags: 0
@@ -2037,7 +2052,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79d397a5133b33b488acdd3307dd3c4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Parallax
-  parallaxEffect: -0.1
+  parallaxEffect: 0.5
   infiniteScrolling: 0
 --- !u!1001 &1522109335
 PrefabInstance:
@@ -2196,7 +2211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79d397a5133b33b488acdd3307dd3c4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Parallax
-  parallaxEffect: -0.1
+  parallaxEffect: 0.5
   infiniteScrolling: 0
 --- !u!1 &1566172448 stripped
 GameObject:
@@ -2215,7 +2230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79d397a5133b33b488acdd3307dd3c4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Parallax
-  parallaxEffect: -0.1
+  parallaxEffect: 0.5
   infiniteScrolling: 0
 --- !u!1001 &1617045142
 PrefabInstance:
@@ -2495,7 +2510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79d397a5133b33b488acdd3307dd3c4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Parallax
-  parallaxEffect: -0.1
+  parallaxEffect: 0.5
   infiniteScrolling: 0
 --- !u!1001 &1794272495
 PrefabInstance:
@@ -2666,7 +2681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79d397a5133b33b488acdd3307dd3c4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Parallax
-  parallaxEffect: -0.1
+  parallaxEffect: 0.5
   infiniteScrolling: 0
 --- !u!1 &1813271798
 GameObject:
@@ -2753,8 +2768,8 @@ Transform:
   m_GameObject: {fileID: 1813271798}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.00020008339, w: 1}
-  m_LocalPosition: {x: -0.14, y: -1.8, z: -0}
-  m_LocalScale: {x: 7.80928, y: 7.8489833, z: 1}
+  m_LocalPosition: {x: -0.14, y: -1.5561, z: -0}
+  m_LocalScale: {x: 8.655695, y: 8.436223, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2771,7 +2786,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79d397a5133b33b488acdd3307dd3c4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Parallax
-  parallaxEffect: -0.1
+  parallaxEffect: 1
   infiniteScrolling: 0
 --- !u!1001 &1880710913
 PrefabInstance:
@@ -2999,7 +3014,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79d397a5133b33b488acdd3307dd3c4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Parallax
-  parallaxEffect: -0.1
+  parallaxEffect: 0.5
   infiniteScrolling: 0
 --- !u!1 &2103353121 stripped
 GameObject:
@@ -3018,7 +3033,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79d397a5133b33b488acdd3307dd3c4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Parallax
-  parallaxEffect: -0.1
+  parallaxEffect: 0.5
   infiniteScrolling: 0
 --- !u!1 &2107158284
 GameObject:
