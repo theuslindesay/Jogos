@@ -68,8 +68,9 @@ public class enemywaypoint : MonoBehaviour
     public void Jump(float jumpForce)
     {
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-
+        
     }
+
 
     void GoToNextWaypoint()
     {
